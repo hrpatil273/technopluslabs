@@ -1,79 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>(function(){var m=localStorage.getItem('tpl-theme')||'auto';document.documentElement.setAttribute('data-theme',m==='auto'?(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'):m)})();</script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7HMK58JMP"></script>
+        <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R7HMK58JMP');</script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="I am Harshwardhan Raghunath Patil, a graduate student at Indiana University, Bloomington. I am a Vice-President and Director of Public Relations at Data Science Club IU. I am an AWS Certified Solution Architect Associate and a Google Certified Advanced Data Analytics Professional. Learn more about my qualifications and experience.">
-        <meta name="keywords" content="Harshwardhan, Harshwardhan Patil, Harshwardhan Raghunath Patil, Data Scientist, Machine Learning Engineer, Data Analysis, Data Analyst, NLP engineer, Natural Language Processing Engineer, Software Developer, System Engineer, Graduate Student, Indiana University, Bloomington, Vice-President, Director of Public Relations, Data Science Club IU, AWS Certified Solution Architect Associate, Google Certified Advanced Data Analytics Professional">
-        <meta property="og:title" content="Harshwardhan Raghunath Patil - Graduate Student | Indiana University, Bloomington">
-        <meta property="og:description" content="I am Harshwardhan Raghunath Patil, a graduate student at Indiana University, Bloomington. I am a Vice-President and Director of Public Relations at Data Science Club IU. I am an AWS Certified Solution Architect Associate and a Google Certified Advanced Data Analytics Professional. Learn more about my qualifications and experience.">
-        <meta property="og:image" content="https://harshwardhanpatil.com/assets/img/person.jpg">
-        <meta property="og:url" content="https://harshwardhanpatil.com">
-        <title>TechnoPlusLabs - Coming Soon</title>
-        <!-- Favicon-->
+        <meta name="description" content="TechnoPlusLabs — Let your imaginations run wild! Aspire and Create to Inspire! Insights on data science, machine learning, cloud computing, and software engineering.">
+        <meta name="keywords" content="TechnoPlusLabs, Data Science, Machine Learning, Cloud Computing, Software Engineering, Blog">
+        <meta property="og:title" content="TechnoPlusLabs Blog">
+        <meta property="og:description" content="Let your imaginations run wild! Aspire and Create to Inspire!">
+        <meta property="og:url" content="https://technopluslabs.com">
+        <title>TechnoPlusLabs - Blog</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-        <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/theme.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+
+            <!-- ── Navbar ── -->
+            <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <div class="container">
                     <a class="navbar-brand" href="index.html"><span class="fw-bolder text-gradient">TechnoPlusLabs</span></a>
-                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarMain">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         </ul>
-                    </div>  -->
-                </div>
-            </nav>
-            <header class="py-3">
-                <div class="container px-5 pb-3">
-                    <div class="row gx-5 align-items-center">
-                        <div class="col-xxl-12">
-                            <!-- Header profile picture-->
-                            <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                                <div class="profile">
-                                    <h6 class="text-gradient"> We're under construction. Please check back for an update soon.</h6>
-                                </div>
-                            </div>
+                        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+                            <span class="nav-date" id="navDate"></span>
+                            <button class="btn-theme" id="themeToggle"></button>
                         </div>
                     </div>
                 </div>
+            </nav>
+
+            <!-- ── Hero ── -->
+            <header class="bg-gradient-primary-to-secondary text-white hero-compact">
+                <div class="container px-5 text-center">
+                    <h1 class="fw-bolder mb-1 fs-2">TechnoPlusLabs Blog</h1>
+                    <p class="mb-0 opacity-75 small">Let your imaginations run wild! Aspire and Create to Inspire!</p>
+                </div>
             </header>
+
+            <!-- ── Stats bar ── -->
+            <div class="stats-bar">
+                <div class="container px-5">
+                    <div class="row align-items-center gx-4">
+                        <div class="col-auto stat-item">
+                            <span class="stat-num text-gradient">1</span>
+                            <span class="stat-lbl">Published</span>
+                        </div>
+                        <div class="col-auto stat-item">
+                            <span class="stat-num text-gradient">3</span>
+                            <span class="stat-lbl">Coming Soon</span>
+                        </div>
+                        <div class="col-auto stat-item">
+                            <span class="stat-num text-gradient">3</span>
+                            <span class="stat-lbl">Categories</span>
+                        </div>
+                        <div class="col-auto ms-auto d-none d-sm-block">
+                            <span class="small text-muted"><i class="bi bi-arrow-clockwise me-1"></i>Updated <span id="statsDate"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── Dashboard ── -->
+            <section class="py-4">
+                <div class="container px-5">
+                    <div class="row gx-5">
+
+                        <!-- Main content (8 cols) -->
+                        <div class="col-lg-8">
+
+                            <!-- Featured post -->
+                            <div class="section-label">Featured</div>
+                            <div class="card rounded-4 overflow-hidden mb-4">
+                                <div class="row g-0">
+                                    <div class="col-md-8">
+                                        <div class="card-body p-4">
+                                            <span class="badge bg-primary mb-2">New</span>
+                                            <h4 class="card-title fw-bolder mb-2">
+                                                <a class="text-decoration-none" href="blog/getting-started.html">Getting Started with TechnoPlusLabs</a>
+                                            </h4>
+                                            <p class="small text-muted mb-2">
+                                                <i class="bi bi-calendar3 me-1"></i>June 28, 2026
+                                                <span class="mx-1">·</span>
+                                                <i class="bi bi-clock me-1"></i>4 min read
+                                            </p>
+                                            <p class="small mb-3" style="color:var(--tpl-text)">Welcome to TechnoPlusLabs — a space exploring the intersection of data science, machine learning, and cloud engineering.</p>
+                                            <a class="btn btn-primary btn-sm" href="blog/getting-started.html">Read Post <i class="bi bi-arrow-right ms-1"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 bg-gradient-primary-to-secondary d-flex align-items-center justify-content-center p-4">
+                                        <i class="bi bi-cpu text-white" style="font-size:3.5rem;opacity:.75"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- All posts -->
+                            <div class="section-label mt-2">All Posts</div>
+                            <div class="row gx-3 gy-3">
+                                <div class="col-md-6">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body p-3">
+                                            <span class="badge bg-secondary mb-2 small">Machine Learning</span>
+                                            <h6 class="card-title fw-bolder mb-1">
+                                                <a class="text-decoration-none" href="#">Understanding Transformer Architectures</a>
+                                            </h6>
+                                            <p class="small text-muted mb-0">A deep dive into the attention mechanism that powers modern LLMs, from BERT to GPT.</p>
+                                            <span class="small text-muted d-block mt-2"><i class="bi bi-hourglass-split me-1"></i>Coming soon</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body p-3">
+                                            <span class="badge bg-secondary mb-2 small">Cloud</span>
+                                            <h6 class="card-title fw-bolder mb-1">
+                                                <a class="text-decoration-none" href="#">AWS Solution Architect Tips</a>
+                                            </h6>
+                                            <p class="small text-muted mb-0">Lessons from preparing for the AWS Certified Solutions Architect Associate exam.</p>
+                                            <span class="small text-muted d-block mt-2"><i class="bi bi-hourglass-split me-1"></i>Coming soon</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card rounded-4 h-100">
+                                        <div class="card-body p-3">
+                                            <span class="badge bg-secondary mb-2 small">Data Science</span>
+                                            <h6 class="card-title fw-bolder mb-1">
+                                                <a class="text-decoration-none" href="#">End-to-End ML Pipelines with Python</a>
+                                            </h6>
+                                            <p class="small text-muted mb-0">Building reproducible ML pipelines from raw data to deployed model using scikit-learn and MLflow.</p>
+                                            <span class="small text-muted d-block mt-2"><i class="bi bi-hourglass-split me-1"></i>Coming soon</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar (4 cols) -->
+                        <div class="col-lg-4 mt-4 mt-lg-0">
+
+                            <!-- About -->
+                            <div class="sidebar-card">
+                                <div class="sidebar-title">About</div>
+                                <p class="small mb-3" style="color:var(--tpl-text);line-height:1.65">A technical blog exploring data science, ML, NLP, and cloud engineering. Built by practitioners, for practitioners.</p>
+                                <a class="btn btn-outline-primary btn-sm w-100" href="about.html">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                            </div>
+
+                            <!-- Categories -->
+                            <div class="sidebar-card">
+                                <div class="sidebar-title">Categories</div>
+                                <a class="category-item" href="#">
+                                    <span><i class="bi bi-cpu me-2" style="color:#7011ff"></i>Machine Learning</span>
+                                    <span class="cat-count">1</span>
+                                </a>
+                                <a class="category-item" href="#">
+                                    <span><i class="bi bi-cloud me-2" style="color:#7011ff"></i>Cloud</span>
+                                    <span class="cat-count">1</span>
+                                </a>
+                                <a class="category-item" href="#">
+                                    <span><i class="bi bi-bar-chart me-2" style="color:#7011ff"></i>Data Science</span>
+                                    <span class="cat-count">1</span>
+                                </a>
+                            </div>
+
+                            <!-- Recent Posts -->
+                            <div class="sidebar-card">
+                                <div class="sidebar-title">Recent Posts</div>
+                                <div class="recent-post-item">
+                                    <span class="rp-num">01</span>
+                                    <div>
+                                        <a href="blog/getting-started.html">Getting Started with TechnoPlusLabs</a>
+                                        <span class="rp-meta">June 28, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post-item">
+                                    <span class="rp-num">02</span>
+                                    <div>
+                                        <a href="#">Transformer Architectures</a>
+                                        <span class="rp-meta">Coming soon</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post-item">
+                                    <span class="rp-num">03</span>
+                                    <div>
+                                        <a href="#">AWS Architect Tips</a>
+                                        <span class="rp-meta">Coming soon</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post-item">
+                                    <span class="rp-num">04</span>
+                                    <div>
+                                        <a href="#">End-to-End ML Pipelines</a>
+                                        <span class="rp-meta">Coming soon</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <!-- Footer-->
+
+        <!-- ── Footer ── -->
         <footer class="bg-white py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto text-gradient"><div class="small m-0">Copyright &copy; TechnoPlusLabs 2024</div></div>
-                    <div class="col-auto text-gradient">
-                            <a class="text-gradient" href="https://www.linkedin.com/in/harshwardhanpatil/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                            <span class="mx-1 text-gradient">&middot;</span>
-                            <a class="small" href="#!">Privacy</a>
-                            <span class="mx-1">&middot;</span>
-                            <a class="small" href="#!">Terms</a>
-                            <span class="mx-1">&middot;</span>
-                            <a class="small" href="#!">Contact</a>
+                    <div class="col-auto"><div class="small m-0 text-gradient fw-bold">Copyright &copy; TechnoPlusLabs 2026</div></div>
+                    <div class="col-auto">
+                        <a class="text-gradient" href="https://www.linkedin.com/in/harshwardhanpatil/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+                        <span class="mx-1 text-muted">&middot;</span>
+                        <a class="small text-muted text-decoration-none" href="privacy.html">Privacy</a>
+                        <span class="mx-1 text-muted">&middot;</span>
+                        <a class="small text-muted text-decoration-none" href="terms.html">Terms</a>
+                        <span class="mx-1 text-muted">&middot;</span>
+                        <a class="small text-muted text-decoration-none" href="about.html">About</a>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/theme.js"></script>
     </body>
 </html>
